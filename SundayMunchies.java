@@ -1,5 +1,5 @@
 public class SundayMunchies{
-/*
+
 //test 1
 public static int findMultiple(int number){
 number = number * 5;
@@ -66,7 +66,7 @@ System.out.println();
 //test 6
 public static int computeSumOfNumber(int number1, int number2,int number3, int number4){
 return number1 + number2 + number3 + number4;
-}*/
+}
 
 
 
