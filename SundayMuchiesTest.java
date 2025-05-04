@@ -12,15 +12,19 @@ int a = SundayMunchies.findMultiple(num);
 System.out.println("the fifth multiple of "+num+" is "+a);
 
 
-//test 6
-System.out.print("Enter four digits: ");
-int num1 = input.nextInt();
-int num2 = input.nextInt();
-int num3 = input.nextInt();
-int num4 = input.nextInt();
+//test 3
+System.out.print("Enter your age: ");
+int age = input.nextInt();
+SundayMunchies.displayAge(age);
 
-int sum = SundayMunchies.computeSumOfNumber(num1,num2,num3,num4);
-System.out.println("The sum is "+sum);
+
+
+//test 4
+System.out.print("Enter the dog name: ");
+String name = input.next();
+System.out.print("Enter the dog's age in human year: ");
+int age = input.nextInt();
+SundayMunchies.displayDogAge(name, age);
 
 
 
@@ -34,19 +38,24 @@ System.out.println();
 
 
 
-//test 4
-System.out.print("Enter the dog name: ");
-String name = input.next();
-System.out.print("Enter the dog's age in human year: ");
-int age = input.nextInt();
-SundayMunchies.displayDogAge(name, age);*/
+//test 6
+System.out.print("Enter four digits: ");
+int num1 = input.nextInt();
+int num2 = input.nextInt();
+int num3 = input.nextInt();
+int num4 = input.nextInt();
+
+int sum = SundayMunchies.computeSumOfNumber(num1,num2,num3,num4);
+System.out.println("The sum is "+sum);
 
 
 
-//test 3
-System.out.print("Enter your age: ");
-int age = input.nextInt();
-SundayMunchies.displayAge(age);
+//test 2
+//test 7
+System.out.print("Enter a year to check if it is a leap year: ");
+int year = input.nextInt();
+SundayMunchies.isLeapYear(year);
+
 
 
 }
