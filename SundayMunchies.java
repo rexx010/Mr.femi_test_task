@@ -9,19 +9,20 @@ return number;
 
 //test 2
 public static void displayPrimeNumber(){
- int number = 1000;
-for(int counter = 2; counter <= number; counter++){
+ int number = 0;
+for(int counter = 2; counter <= 50; counter++){
  int count = 0;
- int primeCounter = 0;
+ int primeCounter = 1;
 
-  for(int divider = 1; divider <= counter; divider++){
-    if (counter % divider == 0){
+  for(int divider = 1; divider <= primeCounter; divider++){
+    if (primeCounter % divider == 0){
       count++;
       }
     }
   if(count == 2){
-  primeCounter++;
   System.out.printf("%d ", counter);
+
+  counter++;
   }
 
 }
@@ -41,7 +42,9 @@ System.out.println();
 
 
 
+
 //test 4
+
 public static void displayDogAge(String name, int humanYear){
 String dogName = name;
 int dogYear = 7;
