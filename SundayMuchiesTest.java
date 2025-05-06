@@ -54,7 +54,11 @@ System.out.println("The sum is "+sum);
 //test 7
 System.out.print("Enter a year to check if it is a leap year: ");
 int year = input.nextInt();
-SundayMunchies.isLeapYear(year);
+SundayMunchies.isLeapYear(year);*/
+
+
+
+SundayMunchies.displayPrimeNumber();
 
 
 
