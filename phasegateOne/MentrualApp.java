@@ -30,17 +30,20 @@ case 1:
 	int day = input.nextInt();
 	System.out.println("How many days is your cycle?: ");
 	int cycle = input.nextInt();
-	String status = MentrualAppFunction.begin(year, month, day);
-	//LocalDate end = MentrualAppFunction.finish(cycle);
-	System.out.println();
+	LocalDate status = MentrualAppFunction.begin(year, month, day);
+	LocalDate end = MentrualAppFunction.finish(year, month, day, cycle);
+	String ovu = MentrualAppFunction.ovulation(year, month, day, cycle);
+	System.out.println("Your cycle starts on the "+status);
+	System.out.println("and your cycle ends on the "+end);
+	System.out.println(ovu);
 	break;
 case 2:
-	System.out.println("Welcome to your calculater \n Enter your start date: ");
-	int start = input.nextInt();
+	//String ovu = MentrualAppFunction.ovulation;
+	//System.out.println(ovu);
 	break;
 case 3:
 	System.out.println("Welcome to your calculater \n Enter your start date: ");
-	start = input.nextInt();
+	int start = input.nextInt();
 	break;
 case 4:
 	System.out.println("Welcome to your calculater \n Enter your start date: ");
