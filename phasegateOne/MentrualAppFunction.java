@@ -1,15 +1,23 @@
 import java.time.LocalDate;
 public class MentrualAppFunction{
 
-public static String begin(int year, int month, int day, int cycle){
+public static LocalDate begin(int year, int month, int day){
 LocalDate start = LocalDate.of(year, month, day);
-String end = finish(start, cycle);
-
-return "Your cycle starts on the "+start+ "\n and ends on the "+end ;
+return start;
 }
 
-public static int finish(LocalDate start, int cycle){
-return start.plusDays(cycle);
-
+public static LocalDate finish(int year, int month, int day, int cycle){
+LocalDate check = LocalDate.of(year, month, day);
+LocalDate end = check.plusDays(cycle);
+return end;
 }
+
+public static String ovulation(int year, int month, int day, int cycle){
+LocalDate starting = LocalDate.of(year, month, day);
+LocalDate ending = starting.plusDays(cycle);
+LocalDate ovuStart = ending.minusDays(16);
+LocalDate ovuEnd = ending.minusDays(12);
+return "your ovulation starts on the "+ovuStart+"\n it ends on the "+ovuEnd;
+}
+
 }
