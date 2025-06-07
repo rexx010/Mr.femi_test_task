@@ -94,6 +94,34 @@ public class MentrualAppFunctionTest{
 	assertEquals(expected, output);
 }
 
+	@Test
+	public void fertileLengthPeriodFunctionWorks(){
+	int number = 2025, num2 = 12, num3 = 3, days = 28;
+	MentrualAppFunction.fertileLength(number, num2, num3, days);
+}
+
+	@Test
+	public void fertileLengthPeriodIsAccurate(){
+	int number = 2025, num2 = 11, num3 = 3, days = 28;
+	String output = MentrualAppFunction.fertileLength(number, num2, num3, days);
+	String expected = "your fertility starts on the 2025-11-10 it ends on the 2025-11-19";
+	assertEquals(expected, output);
+}
+
+	@Test
+	public void safeperiodFunctionWorks(){
+	int number = 2025, num2 = 12, num3 = 3, days = 28;
+	MentrualAppFunction.safeperiod(number, num2, num3, days);
+}
+
+
+	@Test
+	public void safeperiodIsAccurate(){
+	int number = 2025, num2 = 11, num3 = 3, days = 28;
+	String output = MentrualAppFunction.safeperiod(number, num2, num3, days);
+	String expected = "All days are safe to have fun excluding days within 2025-11-10 and 2025-11-19";
+	assertEquals(expected, output);
+}
 
 
 
