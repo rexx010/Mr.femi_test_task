@@ -51,5 +51,51 @@ public class MentrualAppFunctionTest{
 }
 
 
+	@Test
+	public void endCycleFunctionExist(){
+	int number = 1, num2 = 2, num3 = 3, days = 28;
+	MentrualAppFunction.finish(number, num2, num3, days);
+}
+
+	@Test
+	public void endCycleIsAccurate(){
+	int number = 2025, num2 = 12, num3 = 3, days = 28;
+	String output = MentrualAppFunction.finish(number, num2, num3, days);
+	String expected = "Your cycle ends on the 2025-12-31";
+	assertEquals(expected, output);
+}
+
+	@Test
+	public void flowCycleFunctionWorks(){
+	int number = 2025, num2 = 12, num3 = 3;
+	MentrualAppFunction.flowDate(number, num2, num3);
+}
+
+	@Test
+	public void flowCycleIsAccurate(){
+	int number = 2025, num2 = 12, num3 = 3;
+	String output = MentrualAppFunction.flowDate(number, num2, num3);
+	String expected = "your flow starts on 2025-12-03 it ends on 2025-12-08";
+	assertEquals(expected, output);
+}
+
+
+	@Test
+	public void ovulationPeriodFunctionWorks(){
+	int number = 2025, num2 = 12, num3 = 3, days = 28;
+	MentrualAppFunction.ovulation(number, num2, num3, days);
+}
+
+	@Test
+	public void ovulationPeriodIsAccurate(){
+	int number = 2025, num2 = 12, num3 = 3, days = 28;
+	String output = MentrualAppFunction.ovulation(number, num2, num3, days);
+	String expected = "your ovulation starts on 2025-12-15 it ends on 2025-12-19";
+	assertEquals(expected, output);
+}
+
+
+
+
 
 }
