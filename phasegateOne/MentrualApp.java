@@ -32,18 +32,18 @@ case 1:
 	System.out.println();
 
 
-	LocalDate status = MentrualAppFunction.begin(year, month, day);
-	LocalDate end = MentrualAppFunction.finish(year, month, day, cycle);
+	String status = MentrualAppFunction.begin(year, month, day);
+	String end = MentrualAppFunction.finish(year, month, day, cycle);
 	String flow = MentrualAppFunction.flowDate(year, month, day);
 	String ovu = MentrualAppFunction.ovulation(year, month, day, cycle);
 	String fertile = MentrualAppFunction.fertileLength(year, month, day, cycle);
 	String safety = MentrualAppFunction.safeperiod(year, month, day, cycle);
 	System.out.println();
 
-	System.out.println("Your cycle starts on the "+status);
+	System.out.println(status);
 	System.out.println();
 
-	System.out.println("and your cycle ends on the "+end);
+	System.out.println(end);
 	System.out.println();
 
 	System.out.println(flow);
