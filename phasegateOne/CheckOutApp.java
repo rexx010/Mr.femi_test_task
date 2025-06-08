@@ -29,10 +29,11 @@ Enter each product detials in the user's cart...
 	String decision = "yes";
 
 	System.out.println("What is the customer's name?");
-	String name = input.next();
+	String customerName = input.next();
 
 	do{
 	System.out.println("What did the user buy?");
+	System.out.println("rice\nbeans\ngarri\ntomato");
 	String product = input.next();
 
 	System.out.println("How many pieces?");
@@ -51,6 +52,7 @@ Enter each product detials in the user's cart...
 
 	System.out.println("How much discount will he/she get?");
 	int discount = input.nextInt();
+	//CheckOutAppFunction.customerInvoice(customerName, product, pieces, price, cashierName);
 
 	
 	

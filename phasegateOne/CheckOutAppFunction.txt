@@ -1,4 +1,26 @@
 public class CheckOutAppFunction{
 
+String[] names = new String[2];
+String[] goods = {rice, beans, garri, tomato};
+int[] productDetails = new int[];
+
+public static String customerNameProductNameCashierName(String customerName, String product, String cashierName){
+
+}
+
+public static int calculations(int pieces, int price,){
+
+
+
+}
+
+
+
+
+
+
+
+
+
 
 }
