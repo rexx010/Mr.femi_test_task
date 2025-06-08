@@ -5,27 +5,69 @@ public static void main(String[] args){
 
 Scanner input = new Scanner(System.in);
 
-System.out.println("What is the customer's name?");
-String name = input.next();
+String message = """
+WELCOME TO SEMICOLON STORE:
+===========================
 
-System.out.println("What did the user buy?");
-String product = input.next();
+Press 1 to enter the purchase details.
+Press 2 to display customers invoice.
+press 3 to print receipt.
+press 0 to close app.
+""";
 
-System.out.println("How many pieces?");
-int item = input.next();
+boolean hold = true;
+while(hold){
+System.out.println(message);
+int userChoice = input.nextInt();
+switch(userChoice){
+case 1:
+	String output = """
+Enter each product detials in the user's cart...
+================================================""";
+	System.out.println(output);
 
-System.out.println("How much per unit?");
-int price = input.next();
+	String decision = "yes";
 
-System.out.println("Add more items?");
-int item = input.next();
+	System.out.println("What is the customer's name?");
+	String name = input.next();
 
-System.out.println("What is your name?");
-String cashierName = input.next();
+	do{
+	System.out.println("What did the user buy?");
+	String product = input.next();
 
-System.out.println("How much discount will he/she get?");
-int item = input.next();
+	System.out.println("How many pieces?");
+	int pieces = input.nextInt();
 
+	System.out.println("How much per unit?");
+	int price = input.nextInt();
+
+	System.out.println("Add more items?");
+	decision = input.next();
+
+	}while(decision.equals("yes"));
+
+	System.out.println("What is your name?");
+	String cashierName = input.next();
+
+	System.out.println("How much discount will he/she get?");
+	int discount = input.nextInt();
+
+	
+	
+	break;
+
+case 0:
+	hold = false;
+	System.out.print("GoodBye");
+	break;
+default:
+	System.out.print("Invalid input");
+
+
+}
+
+
+}
 }
 
 }
