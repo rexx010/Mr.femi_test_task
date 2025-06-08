@@ -2,13 +2,21 @@ public class CheckOutAppFunction{
 
 String[] names = new String[2];
 String[] goods = {rice, beans, garri, tomato};
+ArrayList<String> productsAdd = new ArrayList<>();
 int[] productDetails = new int[];
 
 public static String customerNameProductNameCashierName(String customerName, String product, String cashierName){
+names[0] = customerName;
+names[1] = cashierName;
+
+for(int count = 0; count < goods.length; count++){
+if(goods[count] == product){
 
 }
+}
+}
 
-public static int calculations(int pieces, int price,){
+public static int calculations(int pieces, int price){
 
 
 
