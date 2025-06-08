@@ -25,7 +25,10 @@ case 1:
 Enter each product detials in the user's cart...
 ================================================""";
 	System.out.println(output);
-
+	
+	String product = null;
+	int pieces = 0;
+	int price = 0;
 	String decision = "yes";
 
 	System.out.println("What is the customer's name?");
@@ -34,13 +37,13 @@ Enter each product detials in the user's cart...
 	do{
 	System.out.println("What did the user buy?");
 	System.out.println("rice\nbeans\ngarri\ntomato");
-	String product = input.next();
+	product = input.next();
 
 	System.out.println("How many pieces?");
-	int pieces = input.nextInt();
+	pieces = input.nextInt();
 
 	System.out.println("How much per unit?");
-	int price = input.nextInt();
+	price = input.nextInt();
 
 	System.out.println("Add more items?");
 	decision = input.next();
@@ -52,8 +55,8 @@ Enter each product detials in the user's cart...
 
 	System.out.println("How much discount will he/she get?");
 	int discount = input.nextInt();
-	//CheckOutAppFunction.customerInvoice(customerName, product, pieces, price, cashierName);
-
+	CheckOutAppFunction.named(customerName, cashierName);
+	CheckOutAppFunction.productBox(product, pieces, price);
 	
 	
 	break;
