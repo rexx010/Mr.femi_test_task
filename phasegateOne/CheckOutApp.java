@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class CheckOutApp{
 public static void main(String[] args){
@@ -55,8 +56,10 @@ Enter each product detials in the user's cart...
 
 	System.out.println("How much discount will he/she get?");
 	int discount = input.nextInt();
-	CheckOutAppFunction.named(customerName, cashierName);
-	CheckOutAppFunction.productBox(product, pieces, price);
+	String[] nameOut = CheckOutAppFunction.named(customerName, cashierName);
+	String[][] productInfo = CheckOutAppFunction.productBox(product, pieces, price);
+	System.out.println(Arrays.toString(nameOut));
+	System.out.println(Arrays.toString(productInfo));
 	
 	
 	break;
