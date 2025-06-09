@@ -1,10 +1,14 @@
 import java.util.Scanner;
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class CheckOutApp{
 public static void main(String[] args){
 
 Scanner input = new Scanner(System.in);
+
+//ArrayList<String> names = new ArrayList<>();
+ArrayList<String> productList = new ArrayList<>();
+//ArrayList<String> price = new ArrayList<>();
 
 String message = """
 WELCOME TO SEMICOLON STORE:
@@ -29,7 +33,7 @@ Enter each product detials in the user's cart...
 	
 	String product = null;
 	int pieces = 0;
-	int price = 0;
+	int prices = 0;
 	String decision = "yes";
 
 	System.out.println("What is the customer's name?");
@@ -37,14 +41,16 @@ Enter each product detials in the user's cart...
 
 	do{
 	System.out.println("What did the user buy?");
-	System.out.println("rice\nbeans\ngarri\ntomato");
+	//System.out.println("rice\nbeans\ngarri\ntomato");
 	product = input.next();
 
 	System.out.println("How many pieces?");
 	pieces = input.nextInt();
 
 	System.out.println("How much per unit?");
-	price = input.nextInt();
+	prices = input.nextInt();
+
+	productList = CheckOutAppFunction.productBox(product, pieces, prices);
 
 	System.out.println("Add more items?");
 	decision = input.next();
@@ -56,12 +62,14 @@ Enter each product detials in the user's cart...
 
 	System.out.println("How much discount will he/she get?");
 	int discount = input.nextInt();
-	String[] nameOut = CheckOutAppFunction.named(customerName, cashierName);
-	String[][] productInfo = CheckOutAppFunction.productBox(product, pieces, price);
-	System.out.println(Arrays.toString(nameOut));
-	System.out.println(Arrays.toString(productInfo));
-	
-	
+
+	ArrayList<String> names = CheckOutAppFunction.named(customerName, cashierName);
+
+
+	System.out.println(names);
+	System.out.println(productList);
+
+	ArrayList<String> itemList = CheckOutAppFunction.list(productList);
 	break;
 
 case 0:
