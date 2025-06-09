@@ -1,33 +1,35 @@
+import java.util.ArrayList;
+
 public class CheckOutAppFunction{
 
-//int addUp = 
 
-public static String[] named(String customerName,  String cashierName){
-String[] names = new String[2];
-names[0] = customerName;
-names[1] = cashierName;
-return names;
+public static ArrayList<String> named(String customerName,  String cashierName){
+ArrayList<String> nameuser = new ArrayList<>();
+nameuser.add(customerName);
+nameuser.add(cashierName);
+return nameuser;
 }
 
-public static String[][] productBox(String item, int pieces, int price){
 
-String[][] product = {{null, null, null, null},{null, null, null, null},{null, null, null}, null};
-
+public static ArrayList<String> productBox(String item, int pieces, int price){
+ArrayList<String> products = new ArrayList<>();
+products.add(item);
+products.add(Integer.toString(pieces));
+products.add(Integer.toString(price));
 int total = pieces * price;
-for(int count = 0; count < product.length; count++){
-	for(int counter = 0; counter < product.length; counter++){
-		if(product[count] == null){
-		product[count][counter] = item;
-		product[count][counter] = Integer.toString(pieces);
-		product[count][counter] = Integer.toString(price);
-		product[count][counter] = Integer.toString(total);
-		}
-	}
-}
-return product;
+products.add(Integer.toString(total));
+
+return products;
 }
 
-/*public static int calculations(String item, int pieces, int price, int discount){
+
+public static ArrayList<String> list(ArrayList<String> one){
+ArrayList<String> productList = new ArrayList<>();
+productList.add(one);
+return productList;
+}
+
+/*public static ArrayList<String> addMore(ArrayList<String> productList, String item, int pieces, int price){
 
 
 
